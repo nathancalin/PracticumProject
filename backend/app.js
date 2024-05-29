@@ -12,9 +12,11 @@ app.use(express.json())
 app.use(cors())
 
 
-const server = () => {
 
-console.log("You are listening to port:", PORT);
+const server = () => {
+    app.listen(PORT, () => {
+        console.log('listening to port: ', PORT)
+    })
 }
 
 
