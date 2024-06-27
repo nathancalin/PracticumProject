@@ -1,40 +1,41 @@
-import React from 'react'
-import styled, { keyframes } from 'styled-components'
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
 import { useWindowSize } from '../../utils/useWindowSize';
 
 function Orb() {
-
-    const {width, height} = useWindowSize()
-
-    console.log(width, height)
+    const { width, height } = useWindowSize();
 
     const moveOrb = keyframes`
-        0%{
+        0% {
             transform: translate(0, 0);
         }
-        50%{
-            transform: translate(${width}px, ${height/2}px);
+        25% {
+            transform: translate(${width / 4}px, ${height / 8}px);  /* Shorter distance */
         }
-        100%{
+        50% {
+            transform: translate(${width / 2}px, ${height / 4}px);  /* Shorter distance */
+        }
+        75% {
+            transform: translate(${width * 3 / 4}px, ${height * 3 / 8}px);  /* Shorter distance */
+        }
+        100% {
             transform: translate(0, 0);
         }
-    `
+    `;
 
     const OrbStyled = styled.div`
-        width: 70vh;
-        height: 70vh;
+        width: 500vh;   /* Increased size for the orb */
+        height: 500vh;
         position: absolute;
         border-radius: 50%;
-        margin-left: -37vh;
-        margin-top: -37vh;
-        background: linear-gradient(180deg, #F56692 0%, #F2994A 100%);
+        margin-left: -50vh;
+        margin-top: -50vh;
+        background: linear-gradient(180deg, #0A75BC 0%, #097DAC 100%);  /* Darker shades of blue */
         filter: blur(400px);
         animation: ${moveOrb} 15s alternate linear infinite;
     `;
 
-    return (
-        <OrbStyled></OrbStyled>
-    )
+    return <OrbStyled></OrbStyled>;
 }
 
-export default Orb
+export default Orb;
