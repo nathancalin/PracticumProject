@@ -81,16 +81,22 @@ function ExpenseForm() {
             <div className="selects input-control">
                 <select required value={category} name="category" id="category" onChange={handleInput('category')}>
                     <option value="" disabled>Select Option</option>
-                    <option value="education">Education</option>
+                    <option value="housing">Housing</option>
+                    <option value="utilities">Utilities</option>
                     <option value="groceries">Groceries</option>
-                    <option value="health">Health</option>
-                    <option value="subscriptions">Subscriptions</option>
-                    <option value="takeaways">Takeaways</option>
-                    <option value="clothing">Clothing</option>
-                    <option value="travelling">Travelling</option>
-                    <option value="other">Other</option>
+                    <option value="transportation">Transportation</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="insurance">Insurance</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="dining">Dining</option>
+                    <option value="travel">Travel</option>
+                    <option value="education">Education</option>
+                    <option value="personal">Personal Care</option>
+                    <option value="debt">Debt Repayment</option>
+                    <option value="miscellaneous">Miscellaneous</option>
                 </select>
             </div>
+
             <div className="input-control">
                 <textarea name="description" value={description} placeholder='Add A Reference' id="description" cols="30" rows="4" onChange={handleInput('description')}></textarea>
             </div>

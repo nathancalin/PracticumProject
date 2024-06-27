@@ -91,14 +91,15 @@ function Form() {
                     <option value="" disabled>Select Option</option>
                     <option value="salary">Salary</option>
                     <option value="freelancing">Freelancing</option>
-                    <option value="investments">Investments</option>
-                    <option value="stocks">Stocks</option>
-                    <option value="bitcoin">Bitcoin</option>
-                    <option value="bank">Bank Transfer</option>
-                    <option value="youtube">Youtube</option>
+                    <option value="investment">Investment</option>
+                    <option value="bonus">Bonus</option>
+                    <option value="interest">Interest</option>
+                    <option value="rental">Rental Income</option>
+                    <option value="business">Business Income</option>
                     <option value="other">Other</option>
                 </select>
             </div>
+
             <div className="input-control">
                 <textarea name="description" value={description} placeholder='Add A Reference' id="description" cols="30" rows="4" onChange={handleInput('description')}></textarea>
             </div>
