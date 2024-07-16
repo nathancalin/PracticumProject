@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,7 +17,10 @@
     "express-validator": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^6.9.1",
-    "mongodb": "^5.1.0",
+    "stripe": "^10.5.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.20"
   }
 }
