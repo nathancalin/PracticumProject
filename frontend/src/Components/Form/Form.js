@@ -89,13 +89,9 @@ function Form() {
             <div className="selects input-control">
                 <select required value={category} name="category" id="category" onChange={handleInput('category')}>
                     <option value="" disabled>Select Option</option>
-                    <option value="salary">Salary</option>
-                    <option value="freelancing">Freelancing</option>
+                    <option value="project">Project</option>                    
                     <option value="investment">Investment</option>
-                    <option value="bonus">Bonus</option>
-                    <option value="interest">Interest</option>
-                    <option value="rental">Rental Income</option>
-                    <option value="business">Business Income</option>
+                    <option value="interest">Interest</option>                    
                     <option value="other">Other</option>
                 </select>
             </div>

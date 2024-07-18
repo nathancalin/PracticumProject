@@ -27,3 +27,9 @@ export const food = <i className="fa-solid fa-bowl-food"></i>
 export const medical = <i className="fa-solid fa-briefcase-medical"></i>
 export const tv = <i className="fa-solid fa-tv"></i>
 export const circle = <i className="fa-solid fa-circle-dot"></i>
+export const utilities = <i className="fa-solid fa-plug"></i>
+export const transportation = <i className="fa-solid fa-car"></i>
+export const healthcare = <i className="fa-solid fa-heartbeat"></i>
+export const insurance = <i className="fa-solid fa-shield-alt"></i>
+export const entertainment = <i className="fa-solid fa-film"></i>
+export const project = <i className="fa-solid fa-briefcase"></i>

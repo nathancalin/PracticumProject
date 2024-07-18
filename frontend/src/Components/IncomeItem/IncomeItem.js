@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { dateFormat } from '../../utils/dateFormat';
-import { bitcoin, book, calender, card, circle, clothing, comment, peso, food, freelance, medical, money, piggy, stocks, takeaway, trash, tv, users, yt } from '../../utils/Icons';
+import { bitcoin, book, calender, card, circle, clothing, comment, peso, food, freelance, medical, money, piggy, stocks, takeaway, trash, tv, users, yt, trend, expenses, utilities, transportation, healthcare, insurance, entertainment, project } from '../../utils/Icons';
 import Button from '../Button/Button';
 
 function IncomeItem({
@@ -18,20 +18,12 @@ function IncomeItem({
 
     const categoryIcon = () =>{
         switch(category) {
-            case 'salary':
+            case 'project':
+                return project;
+            case 'investment':
+                return trend;
+            case 'interest':
                 return money;
-            case 'freelancing':
-                return freelance
-            case 'investments':
-                return stocks;
-            case 'stocks':
-                return users;
-            case 'bitcoin':
-                return bitcoin;
-            case 'bank':
-                return card;
-            case 'youtube':
-                return yt;
             case 'other':
                 return piggy;
             default:
@@ -41,21 +33,19 @@ function IncomeItem({
 
     const expenseCatIcon = () => {
         switch (category) {
-            case 'education':
-                return book;
-            case 'groceries':
-                return food;
-            case 'health':
-                return medical;
-            case 'subscriptions':
-                return tv;
-            case 'takeaways':
-                return takeaway;
-            case 'clothing':
-                return clothing;
-            case 'travelling':
-                return freelance;
-            case 'other':
+            case 'project':
+                return project;
+            case 'utilities':
+                return utilities;
+            case 'transportation':
+                return transportation;
+            case 'healthcare':
+                return healthcare;
+            case 'insurance':
+                return insurance;
+            case 'entertainment':
+                return entertainment;
+            case 'miscellaneous':
                 return circle;
             default:
                 return ''
