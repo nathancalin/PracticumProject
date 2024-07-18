@@ -45,6 +45,8 @@ function IncomeItem({
                 return insurance;
             case 'entertainment':
                 return entertainment;
+            case 'food':
+                return food;
             case 'miscellaneous':
                 return circle;
             default:

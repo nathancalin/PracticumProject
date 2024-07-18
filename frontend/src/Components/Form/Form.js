@@ -65,6 +65,7 @@ function Form() {
                     name={'title'}
                     placeholder="Salary Title"
                     onChange={handleInput('title')}
+                    autoComplete="off"
                 />
             </div>
             <div className="input-control">
@@ -74,6 +75,7 @@ function Form() {
                     name={'amount'}
                     placeholder={'Salary Amount'}
                     onChange={handleInput('amount')}
+                    autoComplete="off"
                 />
             </div>
             <div className="input-control">
@@ -106,6 +108,7 @@ function Form() {
                     name={'projectName'}
                     placeholder="Project Name"
                     onChange={handleInput('projectName')}
+                    autoComplete="off"
                 />
             </div>
             <div className="input-control">
@@ -115,6 +118,7 @@ function Form() {
                     name={'orNumber'}
                     placeholder="OR Number"
                     onChange={handleInput('orNumber')}
+                    autoComplete="off"
                 />
             </div>
             <div className="input-control">
@@ -124,15 +128,17 @@ function Form() {
                     name={'trancheNo'}
                     placeholder="Tranche No."
                     onChange={handleInput('trancheNo')}
+                    autoComplete="off"
                 />
             </div>
             <div className="input-control">
-                <input
+            <input
                     type="text"
                     value={recordedBy}
                     name={'recordedBy'}
                     placeholder="Recorded By"
                     onChange={handleInput('recordedBy')}
+                    autoComplete="off"
                 />
             </div>
             <div className="submit-btn">

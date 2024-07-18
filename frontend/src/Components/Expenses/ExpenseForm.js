@@ -56,6 +56,7 @@ function ExpenseForm() {
                     name={'title'}
                     placeholder="Expense Title"
                     onChange={handleInput('title')}
+                    autoComplete="off"
                 />
             </div>
             <div className="input-control">
@@ -65,6 +66,7 @@ function ExpenseForm() {
                     name={'amount'}
                     placeholder={'Expense Amount'}
                     onChange={handleInput('amount')}
+                    autoComplete="off"
                 />
             </div>
             <div className="input-control">
@@ -86,7 +88,8 @@ function ExpenseForm() {
                     <option value="transportation">Transportation</option>
                     <option value="healthcare">Healthcare</option>
                     <option value="insurance">Insurance</option>
-                    <option value="entertainment">Entertainment</option>                   
+                    <option value="entertainment">Entertainment</option>
+                    <option value="food">Food</option>                     
                     <option value="miscellaneous">Miscellaneous</option>
                 </select>
             </div>
@@ -101,6 +104,7 @@ function ExpenseForm() {
                     name={'department'}
                     placeholder="Department"
                     onChange={handleInput('department')}
+                    autoComplete="off"
                 />
             </div>
             <div className="input-control">
@@ -110,6 +114,7 @@ function ExpenseForm() {
                     name={'personMadeExpense'}
                     placeholder="Person Made Expense"
                     onChange={handleInput('personMadeExpense')}
+                    autoComplete="off"
                 />
             </div>
             <div className="input-control">
@@ -119,6 +124,7 @@ function ExpenseForm() {
                     name={'recordedBy'}
                     placeholder="Recorded By"
                     onChange={handleInput('recordedBy')}
+                    autoComplete="off"
                 />
             </div>
             <div className="submit-btn">

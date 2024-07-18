@@ -1,4 +1,3 @@
-// ViewTransactions.js
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { InnerLayout } from '../styles/Layouts';
@@ -21,41 +20,70 @@ function ViewTransactions() {
                 <div className="transactions">
                     <h2>Incomes</h2>
                     <div className="transaction-list">
-                        {incomes.map(income => (
-                            <TransactionItem
-                                key={income._id}
-                                type="income"
-                                title={income.title}
-                                amount={income.amount}
-                                date={income.date}
-                                category={income.category}
-                                description={income.description}
-                                projectName={income.projectName}
-                                orNumber={income.orNumber}
-                                trancheNo={income.trancheNo}
-                                recordedBy={income.recordedBy}
-                            />
-                        ))}
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Amount</th>
+                                    <th>Date</th>
+                                    <th>Category</th>
+                                    <th>Description</th>
+                                    <th>Project Name</th>
+                                    <th>OR Number</th>
+                                    <th>Tranche No.</th>
+                                    <th>Recorded By</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {incomes.map(income => (
+                                    <tr key={income._id}>
+                                        <td>{income.title}</td>
+                                        <td>{income.amount}</td>
+                                        <td>{income.date}</td>
+                                        <td>{income.category}</td>
+                                        <td>{income.description}</td>
+                                        <td>{income.projectName}</td>
+                                        <td>{income.orNumber}</td>
+                                        <td>{income.trancheNo}</td>
+                                        <td>{income.recordedBy}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
                 <div className="transactions">
                     <h2>Expenses</h2>
                     <div className="transaction-list">
-                        {expenses.map(expense => (
-                            <TransactionItem
-                                key={expense._id}
-                                type="expense"
-                                title={expense.title}
-                                amount={expense.amount}
-                                date={expense.date}
-                                category={expense.category}
-                                description={expense.description}
-                                department={expense.department}
-                                personMadeExpense={expense.personMadeExpense}
-                                recordedBy={expense.recordedBy}
-                            />
-                        ))}
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Amount</th>
+                                    <th>Date</th>
+                                    <th>Category</th>
+                                    <th>Description</th>
+                                    <th>Department</th>
+                                    <th>Person Made Expense</th>
+                                    <th>Recorded By</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {expenses.map(expense => (
+                                    <tr key={expense._id}>
+                                        <td>{expense.title}</td>
+                                        <td>{expense.amount}</td>
+                                        <td>{expense.date}</td>
+                                        <td>{expense.category}</td>
+                                        <td>{expense.description}</td>
+                                        <td>{expense.department}</td>
+                                        <td>{expense.personMadeExpense}</td>
+                                        <td>{expense.recordedBy}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </InnerLayout>
@@ -67,9 +95,26 @@ const ViewTransactionsStyled = styled.div`
     .transactions {
         margin-bottom: 2rem;
     }
-    .transaction-list {
-        display: grid;
-        gap: 1rem;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+        color: #333; /* Darker font color */
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
     }
 `;
 
